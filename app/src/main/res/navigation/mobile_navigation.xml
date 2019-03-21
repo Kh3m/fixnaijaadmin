@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/login_navigation"
+
+            app:startDestination="@id/login_dest">
+
+    <fragment
+        android:id="@+id/login_dest"
+        android:name="com.khemportfolio.fixnaijateam.navigation.LoginFragment"
+        android:label="Login/Register">
+
+        <action
+            android:id="@+id/login_dest_to_landing_dest"
+            app:destination="@+id/main_navigation"
+        />
+    </fragment>
+
+    <navigation
+        android:id="@+id/main_navigation"
+        app:startDestination="@id/landing_dest">
+
+        <fragment
+            android:id="@+id/landing_dest"
+            android:name="com.khemportfolio.fixnaijateam.navigation.LandingFragment"
+            android:label="FixNaija Team"/>
+
+
+
+    </navigation><fragment
+    android:id="@+id/users_dest"
+    android:name="com.khemportfolio.fixnaijateam.navigation.UsersFragment"
+    android:label="Users"/>
+
+</navigation>
